@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Math Exercises - Complete Dataset (45 Exercises)</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f0f2f5; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { text-align: center; color: #1a73e8; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 30px; font-size: 14px; }
+        .chapter { background: white; border-radius: 10px; margin-bottom: 30px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .chapter-title { font-size: 28px; font-weight: bold; color: #1a73e8; border-bottom: 3px solid #1a73e8; padding-bottom: 10px; margin-bottom: 20px; }
+        .exercise { border: 1px solid #ddd; border-radius: 8px; padding: 15px; margin-bottom: 15px; }
+        .ex-id { font-size: 20px; font-weight: bold; color: #1a73e8; display: inline-block; margin-bottom: 10px; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-left: 10px; }
+        .Easy { background: #4caf50; color: white; }
+        .Intermediate { background: #ff9800; color: white; }
+        .Hard { background: #f44336; color: white; }
+        .law { margin: 10px 0; font-style: italic; color: #555; }
+        .tip { background: #e8f0fe; padding: 8px; margin: 10px 0; border-left: 4px solid #1a73e8; font-size: 14px; }
+        button { background: #1a73e8; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; margin-right: 10px; margin-top: 10px; font-size: 14px; }
+        button:hover { background: #1557b0; }
+        .content { display: none; margin-top: 15px; padding: 15px; background: #f9f9f9; border-radius: 8px; border: 1px solid #ddd; }
+        .math { line-height: 1.6; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>📚 Math Exercises - Complete Dataset</h1>
+    <div class="subtitle">45 Exercises • 5 Chapters • Annotated with Difficulty, Law & Tips</div>
+
+    <!-- CHAPTER 1: SEQUENCES -->
+    <div class="chapter">
+        <div class="chapter-title">📖 Chapter 1 - Sequences</div>
+
+        <!-- SEQ01 -->
+        <div class="exercise">
+            <div><span class="ex-id">SEQ01</span><span class="badge Easy">Easy</span></div>
+            <div class="law">📌 Principle of Mathematical Induction</div>
+            <div class="tip">💡 Tip: Don't try to calculate u_n explicitly; trust the algebraic boundaries of the induction step.</div>
+            <button onclick="toggleContent('SEQ01-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('SEQ01-cor')">✅ Correction</button>
+            <div id="SEQ01-ex" class="content"><div class="math">
+                <strong>Exercise SEQ01 (Easy)</strong><br><br>
+                Let \((u_n)\) be the sequence defined by \(u_0 = 2\) and:<br>
+                \[u_{n+1} = \frac{1}{2}u_n + 3 \quad \text{for all } n \in \mathbb{N}\]<br>
+                <strong>Question:</strong> Show by induction that \(u_n < 6\) for all \(n \in \mathbb{N}\).
+            </div></div>
+            <div id="SEQ01-cor" class="content"><div class="math">
+                <strong>Correction SEQ01</strong><br><br>
+                <strong>Initialization:</strong> For \(n = 0\), \(u_0 = 2\), and \(2 < 6\). The property is true for \(n = 0\).<br><br>
+                <strong>Heredity:</strong> Assume that \(u_n < 6\) for a given \(n \in \mathbb{N}\). We want to prove \(u_{n+1} < 6\).<br>
+                \[u_n < 6 \implies \frac{1}{2}u_n < 3 \implies \frac{1}{2}u_n + 3 < 3 + 3 \implies u_{n+1} < 6\]<br>
+                <strong>Conclusion:</strong> By the principle of induction, \(u_n < 6\) for all \(n \in \mathbb{N}\).
+            </div></div>
+        </div>
+
+        <!-- SEQ02 -->
+        <div class="exercise">
+            <div><span class="ex-id">SEQ02</span><span class="badge Intermediate">Intermediate</span></div>
+            <div class="law">📌 Monotonic Sequence Theorem</div>
+            <div class="tip">💡 Tip: To study the monotonicity of a fraction like this evaluate the sign of \(V_{n+1} - V_n\).</div>
+            <button onclick="toggleContent('SEQ02-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('SEQ02-cor')">✅ Correction</button>
+            <div id="SEQ02-ex" class="content"><div class="math">
+                <strong>Exercise SEQ02 (Intermediate)</strong><br><br>
+                Consider the sequence \((v_n)\) defined for \(n \in \mathbb{N}\) by:<br>
+                \[v_n = \frac{3n - 1}{n + 2}\]<br>
+                <strong>Question:</strong> Prove that \((v_n)\) is strictly increasing and bounded. Deduce its convergence limit.
+            </div></div>
+            <div id="SEQ02-cor" class="content"><div class="math">
+                <strong>Correction SEQ02</strong><br><br>
+                \[v_{n+1} - v_n = \frac{3(n+1)-1}{(n+1)+2} - \frac{3n-1}{n+2} = \frac{7}{(n+3)(n+2)} > 0\]<br>
+                So \((v_n)\) is strictly increasing. As \(n \to \infty\), \(v_n \to 3\). Bounded above by 3, below by \(v_0 = -1/2\). Converges to 3.
+            </div></div>
+        </div>
+
+        <!-- SEQ03 -->
+        <div class="exercise">
+            <div><span class="ex-id">SEQ03</span><span class="badge Hard">Hard</span></div>
+            <div class="law">📌 Asymptotic Analysis of Sequences</div>
+            <div class="tip">💡 Tip: Transform the relation to study the behavior of the reciprocal fraction to eliminate the quadratic behavior.</div>
+            <button onclick="toggleContent('SEQ03-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('SEQ03-cor')">✅ Correction</button>
+            <div id="SEQ03-ex" class="content"><div class="math">
+                <strong>Exercise SEQ03 (Hard)</strong><br><br>
+                Let \(u_0 \in ]0, 1[\) and \(u_{n+1} = u_n - u_n^2\) for all \(n \in \mathbb{N}\).<br>
+                <strong>Questions:</strong> 1. Show that \(u_n \in ]0, 1[\) and find its limit. 2. Show \(\lim_{n \to \infty} (n u_n) = 1\).
+            </div></div>
+            <div id="SEQ03-cor" class="content"><div class="math">
+                <strong>Correction SEQ03</strong><br><br>
+                1. By induction, \(0<u_n<1\) and \(u_{n+1}-u_n = -u_n^2 < 0\), so decreasing to \(L=0\).<br>
+                2. \(\frac{1}{u_{n+1}} - \frac{1}{u_n} = \frac{1}{1-u_n} \to 1\), so \(\frac{1}{u_n} \sim n\) thus \(n u_n \to 1\).
+            </div></div>
+        </div>
+
+        <!-- SEQ04 -->
+        <div class="exercise">
+            <div><span class="ex-id">SEQ04</span><span class="badge Easy">Easy</span></div>
+            <div class="law">📌 Monotonic Bounded Sequence Theorem</div>
+            <div class="tip">💡 Tip: Use algebraic factoring on the difference expression.</div>
+            <button onclick="toggleContent('SEQ04-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('SEQ04-cor')">✅ Correction</button>
+            <div id="SEQ04-ex" class="content"><div class="math">
+                <strong>Exercise SEQ04 (Easy)</strong><br><br>
+                Consider \((u_n)\) defined by \(u_n = \frac{n^2+1}{2n^2}\). Show it is strictly decreasing and bounded below. Deduce its convergence.
+            </div></div>
+            <div id="SEQ04-cor" class="content"><div class="math">
+                <strong>Correction SEQ04</strong><br><br>
+                \(u_n = \frac{1}{2} + \frac{1}{2n^2}\). Decreasing because \(1/(2n^2)\) decreases. Bounded below by \(1/2\). Converges to \(1/2\).
+            </div></div>
+        </div>
+
+        <!-- SEQ05 -->
+        <div class="exercise">
+            <div><span class="ex-id">SEQ05</span><span class="badge Intermediate">Intermediate</span></div>
+            <div class="law">📌 Mathematical Induction with Fractions</div>
+            <div class="tip">💡 Tip: Isolate the target fraction inside the induction step.</div>
+            <button onclick="toggleContent('SEQ05-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('SEQ05-cor')">✅ Correction</button>
+            <div id="SEQ05-ex" class="content"><div class="math">
+                <strong>Exercise SEQ05 (Intermediate)</strong><br><br>
+                Let \(u_0=1\) and \(u_{n+1} = \frac{4u_n}{u_n+2}\). Prove \(0<u_n<2\) and study monotonicity.
+            </div></div>
+            <div id="SEQ05-cor" class="content"><div class="math">
+                <strong>Correction SEQ05</strong><br><br>
+                Induction: true for \(n=0\). If \(0<u_n<2\), then \(u_{n+1}=4-8/(u_n+2) \in ]0,2[\).<br>
+                \(u_{n+1}-u_n = \frac{u_n(2-u_n)}{u_n+2} > 0\), strictly increasing.
+            </div></div>
+        </div>
+
+        <!-- SEQ06 -->
+        <div class="exercise">
+            <div><span class="ex-id">SEQ06</span><span class="badge Hard">Hard</span></div>
+            <div class="law">📌 Squeeze Theorem with Integrals</div>
+            <div class="tip">💡 Tip: Bound the polynomial expression inside the integral sign.</div>
+            <button onclick="toggleContent('SEQ06-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('SEQ06-cor')">✅ Correction</button>
+            <div id="SEQ06-ex" class="content"><div class="math">
+                <strong>Exercise SEQ06 (Hard)</strong><br><br>
+                Let \(I_n = \int_0^1 \frac{x^n}{1+x^2} dx\). Show \((I_n)\) is decreasing, bounded, and find its limit.
+            </div></div>
+            <div id="SEQ06-cor" class="content"><div class="math">
+                <strong>Correction SEQ06</strong><br><br>
+                \(I_{n+1}-I_n = \int_0^1 \frac{x^n(x-1)}{1+x^2} dx \le 0\), so decreasing. \(0 \le I_n \le \int_0^1 x^n dx = \frac{1}{n+1} \to 0\). Thus \(I_n \to 0\).
+            </div></div>
+        </div>
+
+        <!-- SEQ07 -->
+        <div class="exercise">
+            <div><span class="ex-id">SEQ07</span><span class="badge Easy">Easy</span></div>
+            <div class="law">📌 Alternating Series Leibniz Test</div>
+            <div class="tip">💡 Tip: Isolate the absolute term to verify monotonic decrease to zero.</div>
+            <button onclick="toggleContent('SEQ07-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('SEQ07-cor')">✅ Correction</button>
+            <div id="SEQ07-ex" class="content"><div class="math">
+                <strong>Exercise SEQ07 (Easy)</strong><br><br>
+                Let \(u_n = \frac{(-1)^n}{n^2+1}\). Show convergence and find the limit.
+            </div></div>
+            <div id="SEQ07-cor" class="content"><div class="math">
+                <strong>Correction SEQ07</strong><br><br>
+                \(|u_n| = \frac{1}{n^2+1} \to 0\), so \(u_n \to 0\).
+            </div></div>
+        </div>
+
+        <!-- SEQ08 -->
+        <div class="exercise">
+            <div><span class="ex-id">SEQ08</span><span class="badge Intermediate">Intermediate</span></div>
+            <div class="law">📌 Subsequence Convergence Theorem</div>
+            <div class="tip">💡 Tip: Use even/odd index groupings to check oscillation.</div>
+            <button onclick="toggleContent('SEQ08-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('SEQ08-cor')">✅ Correction</button>
+            <div id="SEQ08-ex" class="content"><div class="math">
+                <strong>Exercise SEQ08 (Intermediate)</strong><br><br>
+                Let \(u_n = \sin(n\pi/2) + \frac{1}{n+1}\). Determine convergence using subsequences.
+            </div></div>
+            <div id="SEQ08-cor" class="content"><div class="math">
+                <strong>Correction SEQ08</strong><br><br>
+                \(u_{2k} = 0 + \frac{1}{2k+1} \to 0\), \(u_{4k+1} = 1 + \frac{1}{4k+2} \to 1\). Different limits ⇒ no convergence.
+            </div></div>
+        </div>
+
+        <!-- SEQ09 -->
+        <div class="exercise">
+            <div><span class="ex-id">SEQ09</span><span class="badge Hard">Hard</span></div>
+            <div class="law">📌 Riemann Sums Definition</div>
+            <div class="tip">💡 Tip: Factor out 1/n to reveal integration framework.</div>
+            <button onclick="toggleContent('SEQ09-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('SEQ09-cor')">✅ Correction</button>
+            <div id="SEQ09-ex" class="content"><div class="math">
+                <strong>Exercise SEQ09 (Hard)</strong><br><br>
+                Let \(S_n = \sum_{k=1}^n \frac{n}{n^2+k^2}\). Find \(\lim_{n\to\infty} S_n\) using Riemann sums.
+            </div></div>
+            <div id="SEQ09-cor" class="content"><div class="math">
+                <strong>Correction SEQ09</strong><br><br>
+                \(S_n = \frac{1}{n} \sum_{k=1}^n \frac{1}{1+(k/n)^2} \to \int_0^1 \frac{dx}{1+x^2} = \frac{\pi}{4}\).
+            </div></div>
+        </div>
+    </div>
+
+    <!-- CHAPTER 2: LIMITS & CONTINUITY -->
+    <div class="chapter">
+        <div class="chapter-title">📖 Chapter 2 - Limits & Continuity</div>
+
+        <!-- LIM01 -->
+        <div class="exercise">
+            <div><span class="ex-id">LIM01</span><span class="badge Easy">Easy</span></div>
+            <div class="law">📌 Polynomial Factorization</div>
+            <div class="tip">💡 Tip: Factor out (x-a) to clear 0/0.</div>
+            <button onclick="toggleContent('LIM01-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('LIM01-cor')">✅ Correction</button>
+            <div id="LIM01-ex" class="content"><div class="math">
+                <strong>Exercise LIM01 (Easy)</strong><br><br>
+                Calculate: 1. \(\lim_{x\to2} \frac{x^2-4}{x-2}\) 2. \(\lim_{x\to+\infty} \frac{2x^2-3x+1}{5x^2+7}\)
+            </div></div>
+            <div id="LIM01-cor" class="content"><div class="math">
+                <strong>Correction LIM01</strong><br><br>
+                1. \(\frac{(x-2)(x+2)}{x-2} \to 4\) 2. \(\frac{2-3/x+1/x^2}{5+7/x^2} \to \frac{2}{5}\)
+            </div></div>
+        </div>
+
+        <!-- LIM02 -->
+        <div class="exercise">
+            <div><span class="ex-id">LIM02</span><span class="badge Intermediate">Intermediate</span></div>
+            <div class="law">📌 Conjugate Identity</div>
+            <div class="tip">💡 Tip: Multiply by conjugate to resolve ∞-∞.</div>
+            <button onclick="toggleContent('LIM02-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('LIM02-cor')">✅ Correction</button>
+            <div id="LIM02-ex" class="content"><div class="math">
+                <strong>Exercise LIM02 (Intermediate)</strong><br><br>
+                Find \(\lim_{x\to+\infty} (\sqrt{x^2+x+1}-x)\).
+            </div></div>
+            <div id="LIM02-cor" class="content"><div class="math">
+                <strong>Correction LIM02</strong><br><br>
+                Multiply conjugate: \(\frac{x+1}{\sqrt{x^2+x+1}+x} = \frac{1+1/x}{\sqrt{1+1/x+1/x^2}+1} \to \frac{1}{2}\).
+            </div></div>
+        </div>
+
+        <!-- LIM03 -->
+        <div class="exercise">
+            <div><span class="ex-id">LIM03</span><span class="badge Hard">Hard</span></div>
+            <div class="law">📌 Intermediate Value Theorem</div>
+            <div class="tip">💡 Tip: Create g(x)=f(x)-x to find fixed points.</div>
+            <button onclick="toggleContent('LIM03-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('LIM03-cor')">✅ Correction</button>
+            <div id="LIM03-ex" class="content"><div class="math">
+                <strong>Exercise LIM03 (Hard)</strong><br><br>
+                Let \(f:[0,1]\to[0,1]\) be continuous. Show ∃c∈[0,1] with f(c)=c.
+            </div></div>
+            <div id="LIM03-cor" class="content"><div class="math">
+                <strong>Correction LIM03</strong><br><br>
+                Let g(x)=f(x)-x. g(0)≥0, g(1)≤0. By IVT, ∃c with g(c)=0 ⇒ f(c)=c.
+            </div></div>
+        </div>
+
+        <!-- LIM04 -->
+        <div class="exercise">
+            <div><span class="ex-id">LIM04</span><span class="badge Easy">Easy</span></div>
+            <div class="law">📌 Squeeze Theorem</div>
+            <div class="tip">💡 Tip: Sine is bounded between -1 and 1.</div>
+            <button onclick="toggleContent('LIM04-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('LIM04-cor')">✅ Correction</button>
+            <div id="LIM04-ex" class="content"><div class="math">
+                <strong>Exercise LIM04 (Easy)</strong><br><br>
+                Find \(\lim_{x\to0} x^2 \sin(1/x)\).
+            </div></div>
+            <div id="LIM04-cor" class="content"><div class="math">
+                <strong>Correction LIM04</strong><br><br>
+                \(-x^2 \le x^2\sin(1/x) \le x^2 \to 0\). So limit = 0. Can set f(0)=0 for continuity.
+            </div></div>
+        </div>
+
+        <!-- LIM05 -->
+        <div class="exercise">
+            <div><span class="ex-id">LIM05</span><span class="badge Intermediate">Intermediate</span></div>
+            <div class="law">📌 Asymptote Analysis</div>
+            <div class="tip">💡 Tip: Factor dominant terms under the radical.</div>
+            <button onclick="toggleContent('LIM05-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('LIM05-cor')">✅ Correction</button>
+            <div id="LIM05-ex" class="content"><div class="math">
+                <strong>Exercise LIM05 (Intermediate)</strong><br><br>
+                For \(f(x)=\sqrt{x^2-4x+3}\), find oblique asymptote as \(x\to+\infty\).
+            </div></div>
+            <div id="LIM05-cor" class="content"><div class="math">
+                <strong>Correction LIM05</strong><br><br>
+                slope \(a=\lim f(x)/x = 1\), intercept \(b=\lim (f(x)-x) = -2\). Asymptote: \(y=x-2\).
+            </div></div>
+        </div>
+
+        <!-- LIM06 -->
+        <div class="exercise">
+            <div><span class="ex-id">LIM06</span><span class="badge Hard">Hard</span></div>
+            <div class="law">📌 Trigonometric Limits</div>
+            <div class="tip">💡 Tip: Convert differences into product form.</div>
+            <button onclick="toggleContent('LIM06-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('LIM06-cor')">✅ Correction</button>
+            <div id="LIM06-ex" class="content"><div class="math">
+                <strong>Exercise LIM06 (Hard)</strong><br><br>
+                Compute \(\lim_{x\to0} \frac{\tan x - \sin x}{x^3}\) without L'Hôpital.
+            </div></div>
+            <div id="LIM06-cor" class="content"><div class="math">
+                <strong>Correction LIM06</strong><br><br>
+                \(\frac{\sin x}{x} \cdot \frac{1-\cos x}{x^2} \cdot \frac{1}{\cos x} \to 1 \cdot \frac{1}{2} \cdot 1 = \frac{1}{2}\).
+            </div></div>
+        </div>
+
+        <!-- LIM07 -->
+        <div class="exercise">
+            <div><span class="ex-id">LIM07</span><span class="badge Easy">Easy</span></div>
+            <div class="law">📌 Rationalization</div>
+            <div class="tip">💡 Tip: Multiply by conjugate of the radical.</div>
+            <button onclick="toggleContent('LIM07-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('LIM07-cor')">✅ Correction</button>
+            <div id="LIM07-ex" class="content"><div class="math">
+                <strong>Exercise LIM07 (Easy)</strong><br><br>
+                Find \(\lim_{x\to1} \frac{\sqrt{x+3}-2}{x-1}\).
+            </div></div>
+            <div id="LIM07-cor" class="content"><div class="math">
+                <strong>Correction LIM07</strong><br><br>
+                Multiply conjugate: \(\frac{x+3-4}{(x-1)(\sqrt{x+3}+2)} = \frac{1}{\sqrt{x+3}+2} \to \frac{1}{4}\).
+            </div></div>
+        </div>
+
+        <!-- LIM08 -->
+        <div class="exercise">
+            <div><span class="ex-id">LIM08</span><span class="badge Intermediate">Intermediate</span></div>
+            <div class="law">📌 Logarithmic Growth Hierarchy</div>
+            <div class="tip">💡 Tip: Factor fastest growing term.</div>
+            <button onclick="toggleContent('LIM08-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('LIM08-cor')">✅ Correction</button>
+            <div id="LIM08-ex" class="content"><div class="math">
+                <strong>Exercise LIM08 (Intermediate)</strong><br><br>
+                Compute \(\lim_{x\to+\infty} (x\ln x - x^2)\).
+            </div></div>
+            <div id="LIM08-cor" class="content"><div class="math">
+                <strong>Correction LIM08</strong><br><br>
+                \(x^2(\frac{\ln x}{x} - 1) \to +\infty \cdot (-1) = -\infty\).
+            </div></div>
+        </div>
+
+        <!-- LIM09 -->
+        <div class="exercise">
+            <div><span class="ex-id">LIM09</span><span class="badge Hard">Hard</span></div>
+            <div class="law">📌 Continuity & Differentiability</div>
+            <div class="tip">💡 Tip: Use piecewise limit calculation from both sides.</div>
+            <button onclick="toggleContent('LIM09-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('LIM09-cor')">✅ Correction</button>
+            <div id="LIM09-ex" class="content"><div class="math">
+                <strong>Exercise LIM09 (Hard)</strong><br><br>
+                Find a,b so that f(x)={x²+ax+b for x≤1, ln x for x>1} is continuous and differentiable at x=1.
+            </div></div>
+            <div id="LIM09-cor" class="content"><div class="math">
+                <strong>Correction LIM09</strong><br><br>
+                Continuity: 1+a+b=0. Differentiability: 2+a=1 ⇒ a=-1, then b=0.
+            </div></div>
+        </div>
+    </div>
+
+    <!-- CHAPTER 3: DIFFERENTIABILITY -->
+    <div class="chapter">
+        <div class="chapter-title">📖 Chapter 3 - Differentiability</div>
+
+        <!-- DIF01 -->
+        <div class="exercise">
+            <div><span class="ex-id">DIF01</span><span class="badge Easy">Easy</span></div>
+            <div class="law">📌 Product Rule</div>
+            <div class="tip">💡 Tip: Be careful with logarithms domain.</div>
+            <button onclick="toggleContent('DIF01-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('DIF01-cor')">✅ Correction</button>
+            <div id="DIF01-ex" class="content"><div class="math">
+                <strong>Exercise DIF01 (Easy)</strong><br><br>
+                \(f(x)=x\ln x\) on \(]0,+\infty[\). Find derivative and variations.
+            </div></div>
+            <div id="DIF01-cor" class="content"><div class="math">
+                <strong>Correction DIF01</strong><br><br>
+                \(f'(x)=\ln x+1\), zero at \(x=1/e\). Decreasing on (0,1/e), increasing on (1/e,∞), min \(f(1/e)=-1/e\).
+            </div></div>
+        </div>
+
+        <!-- DIF02 -->
+        <div class="exercise">
+            <div><span class="ex-id">DIF02</span><span class="badge Intermediate">Intermediate</span></div>
+            <div class="law">📌 Rate of Change</div>
+            <div class="tip">💡 Tip: Infinite limit = vertical tangent.</div>
+            <button onclick="toggleContent('DIF02-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('DIF02-cor')">✅ Correction</button>
+            <div id="DIF02-ex" class="content"><div class="math">
+                <strong>Exercise DIF02 (Intermediate)</strong><br><br>
+                \(f(x)=\sqrt{x}\cos x\). Check differentiability at 0⁺.
+            </div></div>
+            <div id="DIF02-cor" class="content"><div class="math">
+                <strong>Correction DIF02</strong><br><br>
+                \(\lim_{x\to0^+} \frac{f(x)-f(0)}{x} = \lim \frac{\cos x}{\sqrt{x}} = +\infty\). Not differentiable, vertical tangent.
+            </div></div>
+        </div>
+
+        <!-- DIF03 -->
+        <div class="exercise">
+            <div><span class="ex-id">DIF03</span><span class="badge Hard">Hard</span></div>
+            <div class="law">📌 Mean Value Inequality</div>
+            <div class="tip">💡 Tip: Look for max of |f'|.</div>
+            <button onclick="toggleContent('DIF03-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('DIF03-cor')">✅ Correction</button>
+            <div id="DIF03-ex" class="content"><div class="math">
+                <strong>Exercise DIF03 (Hard)</strong><br><br>
+                \(f(x)=\ln(1+e^{-x})\) on \([0,+\infty)\). Show |f'(x)|≤1/2 and prove |f(b)-f(a)|≤½|b-a|.
+            </div></div>
+            <div id="DIF03-cor" class="content"><div class="math">
+                <strong>Correction DIF03</strong><br><br>
+                \(f'(x)=\frac{-1}{e^x+1}\), so |f'(x)|=1/(e^x+1)≤1/2. By MVT, inequality follows.
+            </div></div>
+        </div>
+
+        <!-- DIF04 -->
+        <div class="exercise">
+            <div><span class="ex-id">DIF04</span><span class="badge Easy">Easy</span></div>
+            <div class="law">📌 Quotient Rule</div>
+            <div class="tip">💡 Tip: Track negative signs carefully.</div>
+            <button onclick="toggleContent('DIF04-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('DIF04-cor')">✅ Correction</button>
+            <div id="DIF04-ex" class="content"><div class="math">
+                <strong>Exercise DIF04 (Easy)</strong><br><br>
+                \(f(x)=\frac{2x+1}{x^2+3}\). Find derivative and variations.
+            </div></div>
+            <div id="DIF04-cor" class="content"><div class="math">
+                <strong>Correction DIF04</strong><br><br>
+                \(f'(x)=\frac{-2(x^2+x-3)}{(x^2+3)^2}\). Zeros at \(x=\frac{-1\pm\sqrt{13}}{2}\).
+            </div></div>
+        </div>
+
+        <!-- DIF05 -->
+        <div class="exercise">
+            <div><span class="ex-id">DIF05</span><span class="badge Intermediate">Intermediate</span></div>
+            <div class="law">📌 Rolle's Theorem</div>
+            <div class="tip">💡 Tip: Verify endpoint equality.</div>
+            <button onclick="toggleContent('DIF05-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('DIF05-cor')">✅ Correction</button>
+            <div id="DIF05-ex" class="content"><div class="math">
+                <strong>Exercise DIF05 (Intermediate)</strong><br><br>
+                \(f(x)=x^3-3x\) on \([-\sqrt3,\sqrt3]\). Apply Rolle's theorem.
+            </div></div>
+            <div id="DIF05-cor" class="content"><div class="math">
+                <strong>Correction DIF05</strong><br><br>
+                \(f(-\sqrt3)=f(\sqrt3)=0\), \(f'(x)=3x^2-3=0\) ⇒ c=±1 ∈ ]-√3,√3[.
+            </div></div>
+        </div>
+
+        <!-- DIF06 -->
+        <div class="exercise">
+            <div><span class="ex-id">DIF06</span><span class="badge Hard">Hard</span></div>
+            <div class="law">📌 Mean Value Theorem</div>
+            <div class="tip">💡 Tip: Use bounds of exponential derivative.</div>
+            <button onclick="toggleContent('DIF06-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('DIF06-cor')">✅ Correction</button>
+            <div id="DIF06-ex" class="content"><div class="math">
+                <strong>Exercise DIF06 (Hard)</strong><br><br>
+                Prove \(1+x < e^x < 1+xe^x\) for \(x>0\) using MVT.
+            </div></div>
+            <div id="DIF06-cor" class="content"><div class="math">
+                <strong>Correction DIF06</strong><br><br>
+                Apply MVT to \(e^t\) on [0,x]: \((e^x-1)/x = e^c\) with 0<c<x ⇒ \(1 < (e^x-1)/x < e^x\). Multiply by x, add 1.
+            </div></div>
+        </div>
+
+        <!-- DIF07 -->
+        <div class="exercise">
+            <div><span class="ex-id">DIF07</span><span class="badge Easy">Easy</span></div>
+            <div class="law">📌 Chain Rule</div>
+            <div class="tip">💡 Tip: Differentiate inner function first.</div>
+            <button onclick="toggleContent('DIF07-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('DIF07-cor')">✅ Correction</button>
+            <div id="DIF07-ex" class="content"><div class="math">
+                <strong>Exercise DIF07 (Easy)</strong><br><br>
+                \(f(x)=\sin(x^3+2x)\). Compute \(f'(x)\).
+            </div></div>
+            <div id="DIF07-cor" class="content"><div class="math">
+                <strong>Correction DIF07</strong><br><br>
+                \(f'(x)=(3x^2+2)\cos(x^3+2x)\).
+            </div></div>
+        </div>
+
+        <!-- DIF08 -->
+        <div class="exercise">
+            <div><span class="ex-id">DIF08</span><span class="badge Intermediate">Intermediate</span></div>
+            <div class="law">📌 Leibniz Formula</div>
+            <div class="tip">💡 Tip: Use combinations for higher derivatives.</div>
+            <button onclick="toggleContent('DIF08-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('DIF08-cor')">✅ Correction</button>
+            <div id="DIF08-ex" class="content"><div class="math">
+                <strong>Exercise DIF08 (Intermediate)</strong><br><br>
+                \(f(x)=x^2 e^x\). Find \(f^{(n)}(x)\) for \(n\ge2\).
+            </div></div>
+            <div id="DIF08-cor" class="content"><div class="math">
+                <strong>Correction DIF08</strong><br><br>
+                \(f^{(n)}(x)=e^x(x^2+2nx+n(n-1))\).
+            </div></div>
+        </div>
+
+        <!-- DIF09 -->
+        <div class="exercise">
+            <div><span class="ex-id">DIF09</span><span class="badge Hard">Hard</span></div>
+            <div class="law">📌 Mean Value Theorem Root Bound</div>
+            <div class="tip">💡 Tip: Show derivative non-zero to prove uniqueness.</div>
+            <button onclick="toggleContent('DIF09-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('DIF09-cor')">✅ Correction</button>
+            <div id="DIF09-ex" class="content"><div class="math">
+                <strong>Exercise DIF09 (Hard)</strong><br><br>
+                \(f(x)=x^5+x^3+x-1\). Show unique root in (0,1).
+            </div></div>
+            <div id="DIF09-cor" class="content"><div class="math">
+                <strong>Correction DIF09</strong><br><br>
+                \(f'(x)=5x^4+3x^2+1>0\), so strictly increasing. \(f(0)=-1<0\), \(f(1)=2>0\) ⇒ unique root in (0,1).
+            </div></div>
+        </div>
+    </div>
+
+    <!-- CHAPTER 4: INTEGRATION (INT01-INT09) -->
+    <div class="chapter">
+        <div class="chapter-title">📖 Chapter 4 - Integration</div>
+
+        <!-- INT01 -->
+        <div class="exercise">
+            <div><span class="ex-id">INT01</span><span class="badge Easy">Easy</span></div>
+            <div class="law">📌 Power Rule</div>
+            <div class="tip">💡 Tip: Look for u'×uⁿ patterns.</div>
+            <button onclick="toggleContent('INT01-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('INT01-cor')">✅ Correction</button>
+            <div id="INT01-ex" class="content"><div class="math">
+                <strong>Exercise INT01 (Easy)</strong><br><br>
+                Compute \(\int_1^e \frac{\ln x}{x} dx\).
+            </div></div>
+            <div id="INT01-cor" class="content"><div class="math">
+                <strong>Correction INT01</strong><br><br>
+                Let u=ln x, du=dx/x ⇒ \(\int_1^e u du = [u^2/2]_0^1 = 1/2\).
+            </div></div>
+        </div>
+
+        <!-- INT02 -->
+        <div class="exercise">
+            <div><span class="ex-id">INT02</span><span class="badge Intermediate">Intermediate</span></div>
+            <div class="law">📌 Integration by Parts</div>
+            <div class="tip">💡 Tip: Use ALPET rule (Arcsin, Log, Power, Exponential, Trig).</div>
+            <button onclick="toggleContent('INT02-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('INT02-cor')">✅ Correction</button>
+            <div id="INT02-ex" class="content"><div class="math">
+                <strong>Exercise INT02 (Intermediate)</strong><br><br>
+                Compute \(\int_0^\pi x\sin x dx\).
+            </div></div>
+            <div id="INT02-cor" class="content"><div class="math">
+                <strong>Correction INT02</strong><br><br>
+                Let u=x, dv=sin x dx ⇒ du=dx, v=-cos x. Then \([-x\cos x]_0^\pi + \int_0^\pi \cos x dx = \pi + 0 = \pi\).
+            </div></div>
+        </div>
+
+        <!-- INT03 -->
+        <div class="exercise">
+            <div><span class="ex-id">INT03</span><span class="badge Hard">Hard</span></div>
+            <div class="law">📌 Wallis Integrals</div>
+            <div class="tip">💡 Tip: Slice off one power to set up IBP.</div>
+            <button onclick="toggleContent('INT03-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('INT03-cor')">✅ Correction</button>
+            <div id="INT03-ex" class="content"><div class="math">
+                <strong>Exercise INT03 (Hard)</strong><br><br>
+                Prove \(I_{n+2}=\frac{n+1}{n+2}I_n\) where \(I_n=\int_0^{\pi/2}\sin^n x dx\).
+            </div></div>
+            <div id="INT03-cor" class="content"><div class="math">
+                <strong>Correction INT03</strong><br><br>
+                Integration by parts with u=sin^{n+1}x, dv=sin x dx gives the recurrence.
+            </div></div>
+        </div>
+
+        <!-- INT04 -->
+        <div class="exercise">
+            <div><span class="ex-id">INT04</span><span class="badge Easy">Easy</span></div>
+            <div class="law">📌 Logarithmic Primitive</div>
+            <div class="tip">💡 Tip: Check numerator = derivative of denominator.</div>
+            <button onclick="toggleContent('INT04-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('INT04-cor')">✅ Correction</button>
+            <div id="INT04-ex" class="content"><div class="math">
+                <strong>Exercise INT04 (Easy)</strong><br><br>
+                Find primitive F of \(f(x)=\frac{2x-3}{x^2-3x+5}\) with F(0)=ln5.
+            </div></div>
+            <div id="INT04-cor" class="content"><div class="math">
+                <strong>Correction INT04</strong><br><br>
+                \(F(x)=\ln(x^2-3x+5)+C\). F(0)=ln5 ⇒ C=0 ⇒ \(F(x)=\ln(x^2-3x+5)\).
+            </div></div>
+        </div>
+
+        <!-- INT05 -->
+        <div class="exercise">
+            <div><span class="ex-id">INT05</span><span class="badge Intermediate">Intermediate</span></div>
+            <div class="law">📌 Double Integration by Parts</div>
+            <div class="tip">💡 Tip: Apply IBP twice to create algebraic loop.</div>
+            <button onclick="toggleContent('INT05-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('INT05-cor')">✅ Correction</button>
+            <div id="INT05-ex" class="content"><div class="math">
+                <strong>Exercise INT05 (Intermediate)</strong><br><br>
+                Compute \(\int_0^\pi e^x\cos x dx\).
+            </div></div>
+            <div id="INT05-cor" class="content"><div class="math">
+                <strong>Correction INT05</strong><br><br>
+                IBP twice yields \(K = -(e^\pi+1+K) ⇒ 2K = -(e^\pi+1) ⇒ K = -(e^\pi+1)/2\).
+            </div></div>
+        </div>
+
+        <!-- INT06 -->
+        <div class="exercise">
+            <div><span class="ex-id">INT06</span><span class="badge Hard">Hard</span></div>
+            <div class="law">📌 Fundamental Theorem of Calculus</div>
+            <div class="tip">💡 Tip: Differentiate directly with variable upper bound.</div>
+            <button onclick="toggleContent('INT06-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('INT06-cor')">✅ Correction</button>
+            <div id="INT06-ex" class="content"><div class="math">
+                <strong>Exercise INT06 (Hard)</strong><br><br>
+                \(G(x)=\int_0^{x^2}e^{-t^2}dt\). Find G'(x).
+            </div></div>
+            <div id="INT06-cor" class="content"><div class="math">
+                <strong>Correction INT06</strong><br><br>
+                G'(x) = 2x·e^{-x^4}.
+            </div></div>
+        </div>
+
+        <!-- INT07 -->
+        <div class="exercise">
+            <div><span class="ex-id">INT07</span><span class="badge Easy">Easy</span></div>
+            <div class="law">📌 Trigonometric Linearization</div>
+            <div class="tip">💡 Tip: Use double-angle identities.</div>
+            <button onclick="toggleContent('INT07-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('INT07-cor')">✅ Correction</button>
+            <div id="INT07-ex" class="content"><div class="math">
+                <strong>Exercise INT07 (Easy)</strong><br><br>
+                Compute \(\int_0^{\pi/2}\cos^2 x dx\).
+            </div></div>
+            <div id="INT07-cor" class="content"><div class="math">
+                <strong>Correction INT07</strong><br><br>
+                \(\cos^2 x = (1+\cos2x)/2\) ⇒ integral = \([\frac{x}{2} + \frac{\sin2x}{4}]_0^{\pi/2} = \frac{\pi}{4}\).
+            </div></div>
+        </div>
+
+        <!-- INT08 -->
+        <div class="exercise">
+            <div><span class="ex-id">INT08</span><span class="badge Intermediate">Intermediate</span></div>
+            <div class="law">📌 Trigonometric Substitution</div>
+            <div class="tip">💡 Tip: Clean up radical differences.</div>
+            <button onclick="toggleContent('INT08-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('INT08-cor')">✅ Correction</button>
+            <div id="INT08-ex" class="content"><div class="math">
+                <strong>Exercise INT08 (Intermediate)</strong><br><br>
+                Compute \(\int_0^{1/2} \frac{dx}{(1-x^2)^{3/2}}\) using x=sin t.
+            </div></div>
+            <div id="INT08-cor" class="content"><div class="math">
+                <strong>Correction INT08</strong><br><br>
+                x=sin t ⇒ integral = \(\int_0^{\pi/6} \sec^2 t dt = [\tan t]_0^{\pi/6} = \frac{\sqrt3}{3}\).
+            </div></div>
+        </div>
+
+        <!-- INT09 -->
+        <div class="exercise">
+            <div><span class="ex-id">INT09</span><span class="badge Hard">Hard</span></div>
+            <div class="law">📌 Improper Integral Convergence</div>
+            <div class="tip">💡 Tip: Split domain at origin.</div>
+            <button onclick="toggleContent('INT09-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('INT09-cor')">✅ Correction</button>
+            <div id="INT09-ex" class="content"><div class="math">
+                <strong>Exercise INT09 (Hard)</strong><br><br>
+                Determine convergence of \(\int_0^{+\infty} x e^{-x} dx\) and find its value.
+            </div></div>
+            <div id="INT09-cor" class="content"><div class="math">
+                <strong>Correction INT09</strong><br><br>
+                Integrate by parts: \(\int_0^B x e^{-x} dx = -Be^{-B} - e^{-B} + 1\). As \(B\to\infty\), limit = 1.
+            </div></div>
+        </div>
+    </div>
+
+    <!-- CHAPTER 5: DIFFERENTIAL EQUATIONS (DE01-DE09) -->
+    <div class="chapter">
+        <div class="chapter-title">📖 Chapter 5 - Differential Equations</div>
+
+        <!-- DE01 -->
+        <div class="exercise">
+            <div><span class="ex-id">DE01</span><span class="badge Easy">Easy</span></div>
+            <div class="law">📌 First-Order Linear DE</div>
+            <div class="tip">💡 Tip: Constant C found with x=0.</div>
+            <button onclick="toggleContent('DE01-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('DE01-cor')">✅ Correction</button>
+            <div id="DE01-ex" class="content"><div class="math">
+                <strong>Exercise DE01 (Easy)</strong><br><br>
+                Solve y' - 3y = 0, y(0)=4.
+            </div></div>
+            <div id="DE01-cor" class="content"><div class="math">
+                <strong>Correction DE01</strong><br><br>
+                y = Ce^{3x}. With y(0)=4 ⇒ C=4 ⇒ y=4e^{3x}.
+            </div></div>
+        </div>
+
+        <!-- DE02 -->
+        <div class="exercise">
+            <div><span class="ex-id">DE02</span><span class="badge Intermediate">Intermediate</span></div>
+            <div class="law">📌 Second-Order Linear DE</div>
+            <div class="tip">💡 Tip: Roots signs determine solution shape.</div>
+            <button onclick="toggleContent('DE02-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('DE02-cor')">✅ Correction</button>
+            <div id="DE02-ex" class="content"><div class="math">
+                <strong>Exercise DE02 (Intermediate)</strong><br><br>
+                Solve y'' - 3y' + 2y = 0, y(0)=0, y'(0)=1.
+            </div></div>
+            <div id="DE02-cor" class="content"><div class="math">
+                <strong>Correction DE02</strong><br><br>
+                r²-3r+2=0 ⇒ r=1,2. y=C₁e^x+C₂e^{2x}. Using conditions: C₁=-1, C₂=1 ⇒ y=e^{2x}-e^x.
+            </div></div>
+        </div>
+
+        <!-- DE03 -->
+        <div class="exercise">
+            <div><span class="ex-id">DE03</span><span class="badge Hard">Hard</span></div>
+            <div class="law">📌 Undetermined Coefficients</div>
+            <div class="tip">💡 Tip: Resonance ⇒ multiply by x.</div>
+            <button onclick="toggleContent('DE03-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('DE03-cor')">✅ Correction</button>
+            <div id="DE03-ex" class="content"><div class="math">
+                <strong>Exercise DE03 (Hard)</strong><br><br>
+                Solve y'' + y = cos x.
+            </div></div>
+            <div id="DE03-cor" class="content"><div class="math">
+                <strong>Correction DE03</strong><br><br>
+                Homogeneous: y_h = C₁cos x + C₂sin x. Particular: y_p = (x/2)sin x. General: y = C₁cos x + C₂sin x + (x/2)sin x.
+            </div></div>
+        </div>
+
+        <!-- DE04 -->
+        <div class="exercise">
+            <div><span class="ex-id">DE04</span><span class="badge Easy">Easy</span></div>
+            <div class="law">📌 Second-Order Linear DE</div>
+            <div class="tip">💡 Tip: Complex roots = trigonometric solution.</div>
+            <button onclick="toggleContent('DE04-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('DE04-cor')">✅ Correction</button>
+            <div id="DE04-ex" class="content"><div class="math">
+                <strong>Exercise DE04 (Easy)</strong><br><br>
+                Solve y'' + 9y = 0, y(0)=2, y'(0)=0.
+            </div></div>
+            <div id="DE04-cor" class="content"><div class="math">
+                <strong>Correction DE04</strong><br><br>
+                r²+9=0 ⇒ r=±3i ⇒ y = A cos3x + B sin3x. y(0)=2 ⇒ A=2, y'(0)=0 ⇒ B=0 ⇒ y=2cos3x.
+            </div></div>
+        </div>
+
+        <!-- DE05 -->
+        <div class="exercise">
+            <div><span class="ex-id">DE05</span><span class="badge Intermediate">Intermediate</span></div>
+            <div class="law">📌 Particular Solutions with Exponentials</div>
+            <div class="tip">💡 Tip: Match template to input function.</div>
+            <button onclick="toggleContent('DE05-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('DE05-cor')">✅ Correction</button>
+            <div id="DE05-ex" class="content"><div class="math">
+                <strong>Exercise DE05 (Intermediate)</strong><br><br>
+                Solve y' - 2y = 3e^x.
+            </div></div>
+            <div id="DE05-cor" class="content"><div class="math">
+                <strong>Correction DE05</strong><br><br>
+                Homogeneous: y_h=Ce^{2x}. Particular: y_p = ke^x ⇒ k=-3. General: y=Ce^{2x}-3e^x.
+            </div></div>
+        </div>
+
+        <!-- DE06 -->
+        <div class="exercise">
+            <div><span class="ex-id">DE06</span><span class="badge Hard">Hard</span></div>
+            <div class="law">📌 Variable Substitution</div>
+            <div class="tip">💡 Tip: Use x=e^t to transform.</div>
+            <button onclick="toggleContent('DE06-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('DE06-cor')">✅ Correction</button>
+            <div id="DE06-ex" class="content"><div class="math">
+                <strong>Exercise DE06 (Hard)</strong><br><br>
+                Solve x²y'' + 3xy' + y = 0 for x>0 using x=e^t.
+            </div></div>
+            <div id="DE06-cor" class="content"><div class="math">
+                <strong>Correction DE06</strong><br><br>
+                Let x=e^t ⇒ \(\ddot{z}+2\dot{z}+z=0\) ⇒ z=(C₁+C₂t)e^{-t} ⇒ y=(C₁+C₂\ln x)/x.
+            </div></div>
+        </div>
+
+        <!-- DE07 -->
+        <div class="exercise">
+            <div><span class="ex-id">DE07</span><span class="badge Easy">Easy</span></div>
+            <div class="law">📌 Separable Equations</div>
+            <div class="tip">💡 Tip: Group y terms on one side, x on the other.</div>
+            <button onclick="toggleContent('DE07-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('DE07-cor')">✅ Correction</button>
+            <div id="DE07-ex" class="content"><div class="math">
+                <strong>Exercise DE07 (Easy)</strong><br><br>
+                Solve y' = 2xy².
+            </div></div>
+            <div id="DE07-cor" class="content"><div class="math">
+                <strong>Correction DE07</strong><br><br>
+                dy/y² = 2x dx ⇒ -1/y = x²+C ⇒ y = -1/(x²+C). Also y=0.
+            </div></div>
+        </div>
+
+        <!-- DE08 -->
+        <div class="exercise">
+            <div><span class="ex-id">DE08</span><span class="badge Intermediate">Intermediate</span></div>
+            <div class="law">📌 Integrating Factor Method</div>
+            <div class="tip">💡 Tip: Multiply by e^{∫P dx}.</div>
+            <button onclick="toggleContent('DE08-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('DE08-cor')">✅ Correction</button>
+            <div id="DE08-ex" class="content"><div class="math">
+                <strong>Exercise DE08 (Intermediate)</strong><br><br>
+                Solve y' + 2y = e^x.
+            </div></div>
+            <div id="DE08-cor" class="content"><div class="math">
+                <strong>Correction DE08</strong><br><br>
+                Integrating factor e^{2x}: (e^{2x}y)' = e^{3x} ⇒ e^{2x}y = e^{3x}/3 + C ⇒ y = e^x/3 + Ce^{-2x}.
+            </div></div>
+        </div>
+
+        <!-- DE09 -->
+        <div class="exercise">
+            <div><span class="ex-id">DE09</span><span class="badge Hard">Hard</span></div>
+            <div class="law">📌 Polynomial Particular Solutions</div>
+            <div class="tip">💡 Tip: Match degree of polynomial guess.</div>
+            <button onclick="toggleContent('DE09-ex')">📖 Exercise</button>
+            <button onclick="toggleContent('DE09-cor')">✅ Correction</button>
+            <div id="DE09-ex" class="content"><div class="math">
+                <strong>Exercise DE09 (Hard)</strong><br><br>
+                Solve y'' - y = x² - 1.
+            </div></div>
+            <div id="DE09-cor" class="content"><div class="math">
+                <strong>Correction DE09</strong><br><br>
+                Homogeneous: y_h = C₁e^x + C₂e^{-x}. Particular: y_p = -x² - 1. General: y = C₁e^x + C₂e^{-x} - x² - 1.
+            </div></div>
+        </div>
+    </div>
+</div>
+
+<script>
+function toggleContent(id) {
+    const element = document.getElementById(id);
+    if (element.style.display === "none" || element.style.display === "") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+    if (window.MathJax) {
+        MathJax.typesetPromise([element]);
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+exercise_id,exercise_file,correction_file,difficulty,mathematical_law,tip
+SEQ01,SEQ01_EX.md,SEQ01_COR.md,Easy,Principle of Mathematical Induction,Don't try to calculate or solve for u_n explicitly; trust the algebraic boundaries of the induction step.
+SEQ02,SEQ02_EX.md,SEQ02_COR.md,Intermediate,Monotonic Sequence Theorem,To study the monotonicity of a fraction like this evaluate the sign of V_(n+1) - V_n.
+SEQ03,SEQ03_EX.md,SEQ03_COR.md,Hard,Asymptotic Analysis of Sequences,Transform the relation to study the behavior of the reciprocal fraction to eliminate the quadratic behavior.
+LIM01,LIM01_EX.md,LIM01_COR.md,Easy,Polynomial Factorization,When encountering a 0/0 indeterminate form involving polynomials factoring out (x-a) clears the bottleneck.
+LIM02,LIM02_EX.md,LIM02_COR.md,Intermediate,Conjugate Identity Property,When dealing with expressions containing square roots creating an infinity - infinity tension multiply by the conjugate expression.
+LIM03,LIM03_EX.md,LIM03_COR.md,Hard,Intermediate Value Theorem,Fixed point questions should always be reconstructed into a root-finding question by creating an auxiliary function g(x) = f(x) - x.
+DIF01,DIF01_EX.md,DIF01_COR.md,Easy,Product Rule for Differentiation,Be meticulous with the domain when working with logarithms; the domain changes the boundaries of your table of variations.
+DIF02,DIF02_EX.md,DIF02_COR.md,Intermediate,Rate of Change Derivative Definition,If the limit calculation of the rate of change approaches infinity it tells you the function is geometrically trapped by a vertical tangent line.
+DIF03,DIF03_EX.md,DIF03_COR.md,Hard,Mean Value Inequality,Whenever an exercise asks you to establish an absolute value inequality containing a structural change look for the maximum value of the derivative function.
+INT01,INT01_EX.md,INT01_COR.md,Easy,Power Rule Formula for Primitives,Look for structural match-ups like u' * u^n. Isolating the component fractions helps reveal composite chain rules.
+INT02,INT02_EX.md,INT02_COR.md,Intermediate,Integration by Parts Method,Use the ALPET priority rule to quickly assign which functional piece serves as u(x) during parts management.
+INT03,INT03_EX.md,INT03_COR.md,Hard,Wallis Integrals Reduction Recursion,When tracking high powers of trigonometric expressions slice off a single power to intentionally set up an operational Integration by Parts framework.
+DE01,DE01_EX.md,DE01_COR.md,Easy,First-Order Homogeneous Linear DE,The integration parameter constant C is unlocked by evaluating the explicit coordinate conditions given for x=0.
+DE02,DE02_EX.md,DE02_COR.md,Intermediate,Second-Order Linear Homogeneous DE,The signs and real nature of the roots found within the characteristic quadratic equation guide the structural shape of your geometric solution.
+DE03,DE03_EX.md,DE03_COR.md,Hard,Method of Undetermined Coefficients,When the external force term matches the structural roots of your core homogeneous system you have a resonance case. Multiply your guess template by x.
+SEQ04,SEQ04_EX.md,SEQ04_COR.md,Easy,Monotonic Bounded Sequence Theorem,Use algebraic factoring on the difference expression instead of expanding the entire polynomial.
+SEQ05,SEQ05_EX.md,SEQ05_COR.md,Intermediate,Mathematical Induction with Fractions,Isolate the target fraction inside the induction step to show that the bounding value is never breached.
+SEQ06,SEQ06_EX.md,SEQ06_COR.md,Hard,Squeeze Theorem with Integrals,Bound the polynomial expression inside the integral sign before running the lower and upper definite limit calculations.
+LIM04,LIM04_EX.md,LIM04_COR.md,Easy,Squeeze Theorem for Limits,Remember that the sine function is bounded between -1 and 1 regardless of what its inner argument is doing.
+LIM05,LIM05_EX.md,LIM05_COR.md,Intermediate,Asymptote Behavior Analysis,Factor out the dominant terms under the radical to determine how the curve tracks parallel to an oblique baseline at infinity.
+LIM06,LIM06_EX.md,LIM06_COR.md,Hard,Trigonometric Limit Transformations,Do not use L'Hopital's rule; convert the differences of functions into a product form using basic trigonometric identities.
+DIF04,DIF04_EX.md,DIF04_COR.md,Easy,Quotient Rule for Differentiation,Track the negative sign carefully when simplifying the numerator expansion of your quotient derivative.
+DIF05,DIF05_EX.md,DIF05_COR.md,Intermediate,Rolle's Theorem,Verify that your endpoint boundary valuations are perfectly equal before stating that a derivative root must exist.
+DIF06,DIF06_EX.md,DIF06_COR.md,Hard,Mean Value Theorem with Exponentials,Set up an inequality using the bounds of an exponential derivative on a locked interval to limit the change in output values.
+INT04,INT04_EX.md,INT04_COR.md,Easy,Logarithmic Primitive Rules,Check if the numerator expression can be rewritten to directly match the exact derivative layout of your denominator function.
+INT05,INT05_EX.md,INT05_COR.md,Intermediate,Double Integration by Parts,When managing mixed exponential and trigonometric components you must apply integration by parts twice to set up an algebraic loop.
+INT06,INT06_EX.md,INT06_COR.md,Hard,Fundamental Theorem of Calculus,Treat the integral as an explicitly defined function and differentiate it directly with respect to its variable upper boundary limit.
+DE04,DE04_EX.md,DE04_COR.md,Easy,Second-Order Linear Homogeneous DE,When your characteristic equation yields complex conjugate roots the general solution switches into a trigonometric layout.
+DE05,DE05_EX.md,DE05_COR.md,Intermediate,Particular Solutions with Exponentials,Match your particular guess template directly to the exponential input force function while keeping track of any shared root conflicts.
+DE06,DE06_EX.md,DE06_COR.md,Hard,Variable Substitution Method,Use a given algebraic mapping link to transform a variable coefficient equation back into a standard constant coefficient form.
+SEQ07,SEQ07_EX.md,SEQ07_COR.md,Easy,Alternating Series Leibniz Test,Isolate the absolute term mapping to verify it decreases monotonically toward zero.
+SEQ08,SEQ08_EX.md,SEQ08_COR.md,Intermediate,Subsequence Convergence Theorem,Use the contrasting behavior of even and odd index groupings to check if a sequence oscillates without a limit.
+SEQ09,SEQ09_EX.md,SEQ09_COR.md,Hard,Riemann Sums Definition,Factor out 1/n from the sum structure to reveal a clean continuous integration framework across a [0,1] domain.
+LIM07,LIM07_EX.md,LIM07_COR.md,Easy,Rationalization Identity,Multiply by the conjugate expression of the radical component to cancel out the zero-denominator factor.
+LIM08,LIM08_EX.md,LIM08_COR.md,Intermediate,Logarithmic Growth Hierarchy,Factor out the fastest growing term to clearly evaluate the limit behavior at positive infinity.
+LIM09,LIM09_EX.md,LIM09_COR.md,Hard,Continuity and Differentiability Linking,Use a piecewise limit calculation from both left and right sides to find parameters that ensure a smooth transition.
+DIF07,DIF07_EX.md,DIF07_COR.md,Easy,Chain Rule for Differentiation,Differentiate the inner function first before applying power rules to the outer envelope.
+DIF08,DIF08_EX.md,DIF08_COR.md,Intermediate,Leibniz Formula for Higher Derivatives,Use combinations of derivatives to expand higher orders without running individual chain calculations.
+DIF09,DIF09_EX.md,DIF09_COR.md,Hard,Mean Value Theorem Root Bound,Show that a derivative is strictly non-zero across an interval to prove that a function cannot cross the axis more than once.
+INT07,INT07_EX.md,INT07_COR.md,Easy,Trigonometric Identity Linearization,Use double-angle trigonometric identities to simplify squared terms before computing the primitive.
+INT08,INT08_EX.md,INT08_COR.md,Intermediate,Trigonometric Substitution,Use a trigonometric assignment to clean up and simplify a radical difference expression.
+INT09,INT09_EX.md,INT09_COR.md,Hard,Improper Integral Convergence,Split the domain boundary at the origin point to evaluate the behavior of both improper integral segments independently.
+DE07,DE07_EX.md,DE07_COR.md,Easy,Separable Differential Equations,Group all y terms on one side and all x terms on the other before integrating.
+DE08,DE08_EX.md,DE08_COR.md,Intermediate,Integrating Factor Method,Multiply the entire equation by an exponential factor to turn the left side into a single product derivative.
+DE09,DE09_EX.md,DE09_COR.md,Hard,Second-Order Particular Polynomial Solutions,Match the degree of your polynomial guess template exactly to the highest power of the driving force.
